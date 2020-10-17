@@ -1,0 +1,104 @@
+<div class="card logPanel">
+  <article class="card-body">
+    <ngb-alert
+      [dismissible]="true"
+      [type]="alert.type"
+      (close)="closeAlert()"
+      *ngIf="alert.isShowAlert"
+    >
+      {{ alert.message }}
+    </ngb-alert>
+    <h4 class="card-title text-center mb-4 mt-1">Save TODO</h4>
+    <button class="btn btn-success pull-right" routerLink="/Home/todo">
+      Back
+    </button>
+    <hr />
+    <form [formGroup]="todoForm" (ngSubmit)="saveTodo()">
+      <div class="form-group">
+        <label for="taskName">Task Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="taskName"
+          id="taskName"
+          [ngClass]="{
+            'invalid-control': validatorObj.taskName.errorMessage
+          }"
+        />
+        <span class="text-danger">
+          {{ validatorObj.taskName.errorMessage }}
+        </span>
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select
+          id="category"
+          class="form-control"
+          formControlName="category"
+          [ngClass]="{
+            'invalid-control': validatorObj.category.errorMessage
+          }"
+        >
+          <option value="">select</option>
+          <option value="Personal">Personal</option>
+          <option value="Office">Office</option>
+          <option value="Social">Social</option>
+          <option value="One Time">One Time</option>
+        </select>
+        <span class="text-danger">
+          {{ validatorObj.category.errorMessage }}
+        </span>
+      </div>
+      <div formGroupName="dateGroup">
+        <div class="form-group">
+          <label for="startDate">Start Date</label>
+          <input
+            type="date"
+            class="form-control"
+            formControlName="startDate"
+            id="startDate"
+            [ngClass]="{
+              'invalid-control': validatorObj.startDate.errorMessage
+            }"
+          />
+          <span class="text-danger">
+            {{ validatorObj.startDate.errorMessage }}
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="endDate">End Date</label>
+          <input
+            type="date"
+            class="form-control"
+            formControlName="endDate"
+            id="endDate"
+            [ngClass]="{
+              'invalid-control': validatorObj.endDate.errorMessage
+            }"
+          />
+          <span class="text-danger">
+            {{ validatorObj.endDate.errorMessage }}
+          </span>
+        </div>
+      </div>
+      <div class="form-group form-check">
+        <label for="autoClose" class="form-check-label"
+          >Auto Close
+          <input
+            type="checkbox"
+            class="form-check-input"
+            formControlName="autoClose"
+            id="autoClose"
+          />
+        </label>
+      </div>
+      <button
+        type="submit"
+        [disabled]="todoForm.invalid"
+        class="btn btn-primary"
+      >
+        Save
+      </button>
+    </form>
+  </article>
+</div>

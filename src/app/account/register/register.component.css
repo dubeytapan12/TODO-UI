@@ -1,0 +1,27 @@
+.logPanel {
+  margin: 50px 30%;
+}
+.register {
+  font-weight: bold;
+  text-decoration: underline;
+  color: blue;
+}
+
+.register:hover {
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+.font-red-color {
+  color: red;
+}
+.font-yellow-color {
+  color: yellow;
+}
+.smile {
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 5px;
+  margin-top: 5px;
+}

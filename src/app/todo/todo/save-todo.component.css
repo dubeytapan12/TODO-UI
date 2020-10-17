@@ -1,0 +1,9 @@
+.form-check-input {
+  margin: 7px 10px;
+}
+.logPanel {
+  margin: 50px 30%;
+}
+.invalid-control {
+  border: solid red 1px;
+}

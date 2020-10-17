@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.page-header {
+  color: #2196f3;
+  font-weight: bold;
+  font-size: 25px;
+}
+.nav-tabs {
+  float: right;
+  margin: 30px 30px;
+}
+.nav-tabs .nav-link.active {
+  background-color: #e0e0e0;
+  color: black;
+}

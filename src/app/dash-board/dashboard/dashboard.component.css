@@ -1,0 +1,8 @@
+.nav-tabs {
+  float: right;
+  margin: 30px 30px;
+}
+.nav-link.active {
+  background-color: #e0e0e0;
+  color: black;
+}
