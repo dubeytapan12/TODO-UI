@@ -7,4 +7,7 @@ export interface TODO {
   autoCloseVM?: string;
   startDateVM?: string;
   endDateVM?: string;
+
+  status?:string;
+  buttonText?:string;
 }

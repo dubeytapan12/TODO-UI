@@ -1,0 +1,15 @@
+<div class="taskwrapper">
+    <div class="taskRow"><b>Task Name</b> {{ task.taskName }}</div>
+    <div class="taskRow"><b>Category</b> {{ task.category }}</div>
+    <div class="taskRow"><b>Status</b> {{ task.status }}</div>
+    <div class="taskRow"><b>Start Date</b> {{ task.startDateVM }}</div>
+    <div class="taskRow"><b>End Date</b> {{ task.endDateVM }}</div>
+    <div>
+        <button
+          type="button"
+           class="btn btn-primary btn-block taskButton"
+        >
+          {{ task.buttonText }}
+        </button>
+    </div>
+</div>

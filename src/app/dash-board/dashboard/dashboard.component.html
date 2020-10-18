@@ -3,16 +3,21 @@
     <span class="page-header">DASHBOARD</span>
   </div>
   <div>
-    {{ userDetails | json }}
     <ngb-tabset [destroyOnHide]="false">
       <ngb-tab title="All">
-        <ng-template ngbTabContent> All Item </ng-template>
+        <ng-template ngbTabContent>
+          <app-task-list></app-task-list>
+        </ng-template>
       </ngb-tab>
       <ngb-tab title="Upcoming">
-        <ng-template ngbTabContent>Upcoming Item</ng-template>
+        <ng-template ngbTabContent>
+          <app-task-list></app-task-list>
+        </ng-template>
       </ngb-tab>
       <ngb-tab title="Completed">
-        <ng-template ngbTabContent> Completed Item </ng-template>
+        <ng-template ngbTabContent> 
+          <app-task-list></app-task-list>  
+        </ng-template>
       </ngb-tab>
     </ngb-tabset>
   </div>
